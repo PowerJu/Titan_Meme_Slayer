@@ -31,11 +31,6 @@ namespace TMS.Player
         {
             Move();
             Jump();
-
-            if(transform.position.z > 40)
-            {
-                transform.position -= new Vector3(0, 0, 40);
-            }
         }
 
         private void Move()
@@ -61,6 +56,7 @@ namespace TMS.Player
             if (_isWiring)
             {
                 Vector3 targetPosition = _wirePosition;
+                targetPosition.x = transform.position.x;
                 Vector3 direction = (targetPosition - transform.position).normalized;
                 float speed = _wireSpeed;
 

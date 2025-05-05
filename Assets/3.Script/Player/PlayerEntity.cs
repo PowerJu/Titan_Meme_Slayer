@@ -7,8 +7,20 @@ namespace TMS.Player
     {
         [SerializeField] private EntityComponent[] _components;
 
-        private void Start()
+        public static PlayerEntity Me { get; private set; }
+
+        private void Awake()
         {
+            if (Me == null)
+            {
+                Me = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             for (int i = 0; i < _components.Length; ++i)
             {
                 _components[i].Init();
@@ -31,12 +43,12 @@ namespace TMS.Player
             }
         }
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
 
         private void OnValidate()
         {
             _components = GetComponentsInChildren<EntityComponent>(true);
         }
-        #endif
+#endif
     }
 }
