@@ -16,6 +16,7 @@ namespace TMS.Player
 
         private Vector3 _wirePosition;
         private bool _isWiring;
+        private bool _isStopped;
 
         public Vector3 Velocity { get; private set; }
 
@@ -45,7 +46,7 @@ namespace TMS.Player
             if (Input.GetButtonDown(JumpString))
             {
                 _isWiring = true;
-                _wirePosition = transform.position + new Vector3(0, 3, 10);
+                _wirePosition = transform.position + new Vector3(0, 2, 10);
             }
 
             if (Input.GetButtonUp(JumpString))
@@ -62,6 +63,13 @@ namespace TMS.Player
 
                 _rigidbody.AddForce(direction * speed);
             }
+        }
+
+        public override void OnDead()
+        {
+            base.OnDead();
+            _rigidbody.linearVelocity = Vector3.zero;
+            _rigidbody.angularVelocity = Vector3.zero;
         }
     }
 }

@@ -14,5 +14,8 @@ namespace TMS.Core
 
         public abstract void ManualUpdate();
 
+        public virtual void OnDead()
+        {
+        }
     }
 }

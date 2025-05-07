@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 41769010}
   m_Layer: 6
   m_Name: road_straight_line (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,11 +230,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &41769011
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 84276841}
   m_Layer: 6
   m_Name: road_straight_line (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,11 +401,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &84276842
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 371810601}
   m_Layer: 6
   m_Name: road_straight_line (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,11 +697,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &371810602
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 624844685}
   m_Layer: 6
   m_Name: road_straight_line (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -850,11 +850,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &624844686
@@ -999,7 +999,7 @@ GameObject:
   - component: {fileID: 716036428}
   m_Layer: 0
   m_Name: Roads_one_line (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 856039730}
   m_Layer: 6
   m_Name: road_straight_line (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1197,11 +1197,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &856039731
@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 886950638}
   m_Layer: 6
   m_Name: road_straight_line (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1306,11 +1306,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &886950639
@@ -1377,7 +1377,7 @@ GameObject:
   - component: {fileID: 911241959}
   m_Layer: 0
   m_Name: Roads_one_line (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1556,7 +1556,7 @@ GameObject:
   - component: {fileID: 1356518853}
   m_Layer: 6
   m_Name: road_straight_line (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1591,11 +1591,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1356518854
@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 1382698858}
   m_Layer: 6
   m_Name: road_straight_line (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1700,11 +1700,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1382698859
@@ -1898,7 +1898,7 @@ GameObject:
   - component: {fileID: 1459672976}
   m_Layer: 6
   m_Name: road_straight_line (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1933,11 +1933,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1459672977
@@ -2004,7 +2004,7 @@ GameObject:
   - component: {fileID: 1460785930}
   m_Layer: 0
   m_Name: Roads_one_line (0)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2129,7 +2129,7 @@ GameObject:
   - component: {fileID: 1520418685}
   m_Layer: 6
   m_Name: road_straight_line (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2164,11 +2164,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1520418686
@@ -2238,7 +2238,7 @@ GameObject:
   - component: {fileID: 1522167701}
   m_Layer: 6
   m_Name: road_straight_line (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2273,11 +2273,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1522167702
@@ -2380,6 +2380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadPrefab: {fileID: 211266598}
   _defaultMapCount: 10
+  _spwanPointTrans: {fileID: 2097356361}
 --- !u!1 &1590689075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2395,7 @@ GameObject:
   - component: {fileID: 1590689077}
   m_Layer: 6
   m_Name: road_straight_line (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2429,11 +2430,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1590689078
@@ -2503,7 +2504,7 @@ GameObject:
   - component: {fileID: 1629336932}
   m_Layer: 6
   m_Name: road_straight_line (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2538,11 +2539,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1629336933
@@ -2674,7 +2675,7 @@ GameObject:
   - component: {fileID: 1741755480}
   m_Layer: 6
   m_Name: road_straight_line (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2709,11 +2710,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1741755481
@@ -2783,7 +2784,7 @@ GameObject:
   - component: {fileID: 1772138152}
   m_Layer: 6
   m_Name: road_straight_line (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2818,11 +2819,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &1772138153
@@ -3081,6 +3082,37 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &2097356360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2097356361}
+  m_Layer: 0
+  m_Name: StartPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2097356361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097356360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 11.56, z: -17.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2114866483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3191,11 +3223,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!4 &807112185224430854
@@ -3272,7 +3304,7 @@ GameObject:
   - component: {fileID: 1947690085093780846}
   m_Layer: 6
   m_Name: road_straight_line (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3292,11 +3324,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!1 &1749610689786859862
@@ -3332,7 +3364,7 @@ GameObject:
   - component: {fileID: 9143794400687807876}
   m_Layer: 6
   m_Name: road_straight_line (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3397,11 +3429,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!33 &1978032505102820505
@@ -3532,11 +3564,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!23 &2647632406316755500
@@ -3643,22 +3675,6 @@ PrefabInstance:
     - target: {fileID: 1433482639189366894, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512532523333806414, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
-      propertyPath: m_Drag
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512532523333806414, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
-      propertyPath: m_ImplicitCom
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512532523333806414, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
-      propertyPath: m_ImplicitTensor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4828890812547543193, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
-      propertyPath: _wireSpeed
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3773,7 +3789,7 @@ GameObject:
   - component: {fileID: 2513011065633961145}
   m_Layer: 6
   m_Name: road_straight_line (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3849,7 +3865,7 @@ GameObject:
   - component: {fileID: 8269026453346618667}
   m_Layer: 0
   m_Name: Roads_one_line (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4228,7 +4244,7 @@ GameObject:
   - component: {fileID: 1193941818051062372}
   m_Layer: 6
   m_Name: road_straight_line (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4321,7 +4337,7 @@ GameObject:
   - component: {fileID: 447892833464171513}
   m_Layer: 6
   m_Name: road_straight_line (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4341,11 +4357,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 625088484782227311, guid: c76d67cd22e663941b37a7d55877c8f4, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -4358,3 +4374,4 @@ SceneRoots:
   - {fileID: 533281892}
   - {fileID: 90492646561521979}
   - {fileID: 1568574621}
+  - {fileID: 2097356361}
