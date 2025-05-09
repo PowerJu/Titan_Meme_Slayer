@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMS.Core;
 using UnityEngine;
@@ -9,6 +10,11 @@ namespace UserInterface
     public class UIManager : Singleton<UIManager>
     {
         protected readonly Dictionary<string, UIBase> uiDic = new();
+
+        private void Start()
+        {
+            OpenUI<UIPlay>();
+        }
 
         public T GetUI<T>() where T : UIBase
         {
