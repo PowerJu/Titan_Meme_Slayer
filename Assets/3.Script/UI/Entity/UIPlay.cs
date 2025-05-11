@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UserInterface;
 
 public class UIPlay : UIBase
@@ -8,10 +9,10 @@ public class UIPlay : UIBase
     
     private void Awake()
     {
-        BindEvent(_playButton, (_) => { StartGame(); });
+        BindEvent(_playButton, StartGame);
     }
 
-    private void StartGame()
+    private void StartGame(PointerEventData _)
     {
         // 게임 시작
     }
