@@ -13,19 +13,6 @@ namespace TMS.Player
 
         public override void ManualUpdate()
         {
-            if (Input.GetButtonDown(JumpString))
-            {
-                _wireObject.gameObject.SetActive(true);
-                _isWiring = true;
-                _wirePosition = transform.position + new Vector3(0, 2, 10);
-            }
-
-            if (Input.GetButtonUp(JumpString))
-            {
-                _wireObject.gameObject.SetActive(false);
-                _isWiring = false;
-            }
-
             if (_isWiring)
             {
                 Vector3 currentPosition = transform.position + _wireOffset;
@@ -35,6 +22,17 @@ namespace TMS.Player
                 _wireObject.up = (targetPosition - currentPosition).normalized;
                 _wireObject.localScale = new Vector3(0.05f, magnitude * 0.5f, 0.05f);
             }
+        }
+
+        public void SetWirePosition(Vector3 wirePosition)
+        {
+            _wirePosition = wirePosition;
+        }
+
+        public void ActiveWire(bool value)
+        {
+            _isWiring = value;
+            _wireObject.gameObject.SetActive(value);
         }
     }
 }

@@ -7,6 +7,7 @@ namespace TMS.Core
     {
         [SerializeField] private Transform _target;
         [SerializeField] private Vector3 _offset = new Vector3(0, 2, -10);
+        [SerializeField] private float _speed = 10.0f;
 
         private void LateUpdate()
         {
@@ -14,7 +15,7 @@ namespace TMS.Core
                 return;
 
             Vector3 targetPosition = _target.position + _offset;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 5f);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * _speed);
         }
     }
 }

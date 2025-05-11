@@ -227,11 +227,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7204d3ea8cf000e42a279f3a35d28f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _modelTransform: {fileID: 4202543586137049418}
   _forwardSpeed: 5
-  _wireSpeed: 10
   _horizontalSpeed: 5
   _jumpForce: 5
   _rigidbody: {fileID: 1512532523333806414}
+  _wireSpeed: 2
+  _minWireDistance: 20
+  _maxWireDistance: 30
+  _maxWireHeight: 30
+  _wireDirection: {x: 0, y: 1, z: 5}
 --- !u!136 &4705499332071212496
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -309,6 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wireObject: {fileID: 1339514750599654253}
+  _wireOffset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1506929127709999199
 GameObject:
   m_ObjectHideFlags: 0
