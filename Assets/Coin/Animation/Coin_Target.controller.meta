@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cf45d7823beecb84b907c77483816375
+timeCreated: 1578341728
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 281769
+  packageName: Game Coin Sprite FX
+  packageVersion: 1.0
+  assetPath: Assets/Coin/Animation/Coin_Target.controller
+  uploadId: 655775

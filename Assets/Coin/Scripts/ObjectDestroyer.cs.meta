@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cfe7513425ea66540ac34e38280648b7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 281769
+  packageName: Game Coin Sprite FX
+  packageVersion: 1.0
+  assetPath: Assets/Coin/Scripts/ObjectDestroyer.cs
+  uploadId: 655775

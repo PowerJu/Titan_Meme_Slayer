@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 613bfdd9b19dc8f4e89fef47b6d8b214
+timeCreated: 1577913109
+licenseType: Store
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 281769
+  packageName: Game Coin Sprite FX
+  packageVersion: 1.0
+  assetPath: Assets/Coin/Scene/Demo.unity
+  uploadId: 655775

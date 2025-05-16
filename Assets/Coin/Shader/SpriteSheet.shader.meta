@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2a7b9215b21d08f4ebf9a934dc308c06
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 281769
+  packageName: Game Coin Sprite FX
+  packageVersion: 1.0
+  assetPath: Assets/Coin/Shader/SpriteSheet.shader
+  uploadId: 655775

@@ -3800,6 +3800,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2154193448365955963, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
+      propertyPath: _components.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154193448365955963, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
+      propertyPath: '_components.Array.data[3]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705854477956945477, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
+      propertyPath: _wireOffset.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828890812547543193, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828890812547543193, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
+      propertyPath: _jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828890812547543193, guid: ff876da711489dc4e993f3f36d6cdddc, type: 3}
+      propertyPath: _maxWireHeight
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

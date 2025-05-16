@@ -21,6 +21,7 @@ namespace TMS.Player
         [SerializeField] private float _maxWireHeight = 30.0f;
         [SerializeField] private Vector3 _wireDirection = new Vector3(0, 1, 5);
 
+
         private SpringJoint _joint;
         private PlayerWire _playerWire = null;
         private Vector3 _startPosition;

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ed1a60fa1b047844ab66574421ce3658
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 281769
+  packageName: Game Coin Sprite FX
+  packageVersion: 1.0
+  assetPath: Assets/Coin/Animation/Coin_Show.controller
+  uploadId: 655775

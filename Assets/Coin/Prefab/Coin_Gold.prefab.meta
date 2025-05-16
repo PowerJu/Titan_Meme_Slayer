@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cfcde1201066ce149a03dec75fa212ff
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 281769
+  packageName: Game Coin Sprite FX
+  packageVersion: 1.0
+  assetPath: Assets/Coin/Prefab/Coin_Gold.prefab
+  uploadId: 655775
