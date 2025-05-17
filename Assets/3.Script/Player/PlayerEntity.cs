@@ -56,6 +56,17 @@ namespace TMS.Player
             }
         }
 
+        private void FixedUpdate()
+        {
+            if (_isStopped)
+                return;
+
+            for (int i = 0; i < _components.Length; ++i)
+            {
+                _components[i].ManualFixedUpdate();
+            }
+        }
+
         private void OnDead()
         {
             _isStopped = true;

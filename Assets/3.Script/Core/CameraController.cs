@@ -9,7 +9,7 @@ namespace TMS.Core
         [SerializeField] private Vector3 _offset = new Vector3(0, 2, -10);
         [SerializeField] private float _speed = 10.0f;
 
-        private void LateUpdate()
+        private void FixedUpdate()
         {
             if (_target == null)
                 return;

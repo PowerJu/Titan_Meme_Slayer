@@ -24,6 +24,13 @@ namespace TMS.Player
             }
         }
 
+        public override void OnDead()
+        {
+            base.OnDead();
+            _isWiring = false;
+            _wireObject.gameObject.SetActive(false);
+        }
+
         public void SetWirePosition(Vector3 wirePosition)
         {
             _wirePosition = wirePosition;
