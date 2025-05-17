@@ -13,7 +13,8 @@ namespace UserInterface
 
         private void Start()
         {
-            OpenUI<UIPlay>();
+            //OpenUI<UIPlay>();
+            OpenUI<UIStageClear>();
         }
 
         public T GetUI<T>() where T : UIBase
