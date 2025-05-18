@@ -20,6 +20,7 @@ namespace TMS.Player
         [SerializeField] private float _minWireDistance = 2.0f;
         [SerializeField] private float _maxWireDistance = 10.0f;
         [SerializeField] private float _maxWireHeight = 30.0f;
+        [SerializeField] private float _maxWireHeightOffset = 5.0f;
         [SerializeField] private Vector3 _wireDirection = new Vector3(0, 1, 5);
 
 
@@ -103,7 +104,7 @@ namespace TMS.Player
 
             _startPosition = transform.position;
             _endPosition = _startPosition + Vector3.forward * wireDistZ;
-            _wirePosition = (_startPosition + _endPosition) * 0.5f + new Vector3(0, wireDistZ, 0);
+            _wirePosition = (_startPosition + _endPosition) * 0.5f + new Vector3(0, _maxWireHeightOffset, 0);
 
             _joint = gameObject.AddComponent<SpringJoint>();
             _joint.autoConfigureConnectedAnchor = false;

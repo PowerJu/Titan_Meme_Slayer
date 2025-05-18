@@ -44,6 +44,7 @@ namespace TMS.Player
             if(Input.GetKeyDown(KeyCode.Space) && _isStopped)
             {
                 _isStopped = false;
+                GameManager.Instance.StartGame();
                 return;
             }
 

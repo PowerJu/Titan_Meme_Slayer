@@ -11,11 +11,6 @@ namespace UserInterface
     {
         protected readonly Dictionary<string, UIBase> uiDic = new();
 
-        private void Start()
-        {
-            OpenUI<UIPlay>();
-        }
-
         public T GetUI<T>() where T : UIBase
         {
             var uiName = typeof(T).Name;
