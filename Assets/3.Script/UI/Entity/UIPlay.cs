@@ -9,8 +9,8 @@ using TMS.Event;
 public class UIPlay : UIBase
 {
     [SerializeField] private GameObject _playButton;
-    [SerializeField] private RectTransform _wireNode;
-
+    [SerializeField] private TMP_Text _scoreText;
+    
     private CancellationTokenSource _cancelToken;
 
     private void Awake()
@@ -18,27 +18,25 @@ public class UIPlay : UIBase
         _cancelToken?.Dispose();
         _cancelToken = new CancellationTokenSource();
         EventBus.Subscribe<GameStartEvent>(StartGame);
+        EventBus.Subscribe<GameClearEvent>(ClearGame);
+        EventBus.Subscribe<UpdateScoreEvent>(OnAcquireCoin);
+
+        _scoreText.text = $"Score: {0}";
     }
 
     private void StartGame(GameStartEvent gameStartEvent)
     {
-        ShowWireNode().Forget();
     }
 
-    private async UniTask ShowWireNode()
+    private void ClearGame(GameClearEvent gameStartEvent)
     {
-        await UniTask.Delay(300, cancellationToken: _cancelToken.Token);
-
-        var size = 200.0f;
-        var targetSize = 100.0f;
-
-        while (true)
-        {
-            _wireNode.sizeDelta = new Vector2(size, size);
-            await _wireNode.DOSizeDelta(new Vector2(targetSize, targetSize), 0.5f).ToUniTask();
-            await _wireNode.DOSizeDelta(Vector2.zero, 0.5f).ToUniTask();
-
-            await UniTask.Delay(Random.Range(500, 1000), cancellationToken: _cancelToken.Token);
-        }
     }
+
+    private void OnAcquireCoin(UpdateScoreEvent acquireCoinEvent)
+    {
+        _scoreText.text = $"Score: {acquireCoinEvent.Score}";
+        _scoreText.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f).SetEase(Ease.OutBack);
+    }
+
+
 }
