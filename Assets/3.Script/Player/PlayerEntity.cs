@@ -68,7 +68,7 @@ namespace TMS.Player
             }
         }
 
-        private void OnDead()
+        public void OnDead()
         {
             _isStopped = true;
             transform.position = MapManager.Instance.SpawnPoint;

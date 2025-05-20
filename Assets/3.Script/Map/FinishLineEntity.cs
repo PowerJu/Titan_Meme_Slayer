@@ -10,6 +10,7 @@ namespace TMS.Map
         public void OnInteract(PlayerEntity player)
         {
             GameManager.Instance.ClearGame();
+            player.OnDead();
         }
 
         private void OnTriggerEnter(Collider other)

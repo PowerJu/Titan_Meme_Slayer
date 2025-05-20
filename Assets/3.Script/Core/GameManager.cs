@@ -25,7 +25,7 @@ namespace TMS.Core
         public void ClearGame()
         {
             UIManager.Instance.CloseUI<UIPlay>();
-            UIManager.Instance.OpenUI<UILobby>();
+            UIManager.Instance.OpenUI<UIStageClear>();
             
             EventBus.Publish(new GameClearEvent());
         }
