@@ -31,6 +31,7 @@ namespace TMS.Player
         private Vector3 _wirePosition;
         private bool _isWiring;
 
+        public bool IsWiring => _isWiring;
         public Vector3 Velocity { get; private set; }
 
         public override void Init()
@@ -92,9 +93,13 @@ namespace TMS.Player
             }
 
             if (_isWiring)
+            {
                 _modelTransform.up = Vector3.Lerp(_modelTransform.up, _wirePosition - transform.position, Time.fixedDeltaTime);
+            }
             else
+            {
                 _modelTransform.up = Vector3.Lerp(_modelTransform.up, Vector3.up, Time.fixedDeltaTime);
+            }
         }
 
         private void StartWireAction()
@@ -106,13 +111,15 @@ namespace TMS.Player
             _endPosition = _startPosition + Vector3.forward * wireDistZ;
             _wirePosition = (_startPosition + _endPosition) * 0.5f + new Vector3(0, _maxWireHeightOffset, 0);
 
+            Debug.Log($"Wire Position: {_wirePosition} Start: {_startPosition} End: {_endPosition}");
+
             _joint = gameObject.AddComponent<SpringJoint>();
             _joint.autoConfigureConnectedAnchor = false;
             _joint.connectedAnchor = _wirePosition;
             _joint.maxDistance = Vector3.Distance(transform.position, _wirePosition);
             _joint.minDistance = _joint.maxDistance * 0.95f;
-            _joint.spring = 10.0f;
-            _joint.damper = 0.5f;
+            _joint.spring = 1000.0f;
+            _joint.damper = 100.0f;
             _joint.enableCollision = false;
 
             _playerWire.SetWirePosition(_wirePosition);

@@ -8,7 +8,7 @@ namespace TMS.Player
         [SerializeField] private Animator _animator;
         [SerializeField] private PlayerMovement _playerMovement;
 
-        private static readonly int IsRunning = Animator.StringToHash("IsRunning");
+        private static readonly int IsWiring = Animator.StringToHash("IsWiring");
 
         public override void ManualUpdate()
         {
@@ -17,7 +17,7 @@ namespace TMS.Player
 
         private void UpdateAnimatorParameters()
         {
-            _animator.SetBool(IsRunning, Mathf.Abs(_playerMovement.Velocity.z) > 0.1f);
+            _animator.SetBool(IsWiring, _playerMovement.IsWiring);
         }
     }
 }

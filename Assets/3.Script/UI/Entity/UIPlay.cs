@@ -37,6 +37,4 @@ public class UIPlay : UIBase
         _scoreText.text = $"Score: {acquireCoinEvent.Score}";
         _scoreText.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f).SetEase(Ease.OutBack);
     }
-
-
 }
