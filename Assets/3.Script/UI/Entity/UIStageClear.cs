@@ -1,44 +1,17 @@
-using System;
-using System.Collections;
-using DG.Tweening;
 using UnityEngine;
+using UserInterface;
 
-namespace UserInterface
+public class UIStageClear : UIBase
 {
-    public class UIStageClear : UIBase
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        [SerializeField] private RectTransform rouletteRectTransform;
-        [SerializeField] private RectTransform arrowRectTransform;
-
-        private float _rouletteMaxX;
-        private float _rouletteMinX;
         
-        private void Awake()
-        {
-            _rouletteMaxX = rouletteRectTransform.rect.xMax;
-            _rouletteMinX = rouletteRectTransform.rect.xMin;
-            
-            MoveMaxX();
-        }
+    }
 
-        void Start()
-        {
-
-        }
-
-        void Update()
-        {
-
-        }
+    // Update is called once per frame
+    void Update()
+    {
         
-        private void MoveMaxX()
-        {
-            arrowRectTransform.DOLocalMoveX(_rouletteMaxX, 1f).OnComplete(MoveMinX);
-        }
-
-        private void MoveMinX()
-        {
-            arrowRectTransform.DOLocalMoveX(_rouletteMinX, 1f).OnComplete(MoveMaxX);
-        }
     }
 }
