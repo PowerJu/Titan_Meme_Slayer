@@ -14,6 +14,6 @@ public class UICoinOverlay : UIBase
     
     private void OnAcquireGameScore(UpdateGameScoreEvent acquireCoinEvent)
     {
-        _scoreText.text = $"Score: {acquireCoinEvent.GameScore}";
+        _scoreText.text = $"{acquireCoinEvent.GameScore}";
     }
 }
