@@ -10,6 +10,18 @@ namespace TMS.Player
 
         private static readonly int IsWiring = Animator.StringToHash("IsWiring");
 
+        public override void OnPlay()
+        {
+            base.OnPlay();
+            _animator.SetTrigger("Play");
+        }
+
+        public override void OnDead()
+        {
+            base.OnDead();
+            _animator.SetTrigger("Reset");
+        }
+
         public override void ManualUpdate()
         {
             UpdateAnimatorParameters();

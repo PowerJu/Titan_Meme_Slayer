@@ -14,6 +14,7 @@ namespace TMS.Player
         private AcquireGameScoreEvent _acquireGameScoreEvent = new AcquireGameScoreEvent(1);
 
         public static PlayerEntity Me { get; private set; }
+        public bool IsPlaying => !_isStopped;
 
 
         private void Awake()
@@ -32,6 +33,8 @@ namespace TMS.Player
             {
                 _components[i].Init();
             }
+
+            EventBus.Subscribe<PlayStartEvent>(Play);
         }
 
         private void OnDestroy()
@@ -44,13 +47,6 @@ namespace TMS.Player
 
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Space) && _isStopped)
-            {
-                _isStopped = false;
-                GameManager.Instance.StartGame();
-                return;
-            }
-
             if (_isStopped)
                 return;
 
@@ -72,6 +68,22 @@ namespace TMS.Player
             {
                 _components[i].ManualFixedUpdate();
             }
+        }
+
+        private void Play(PlayStartEvent @event)
+        {
+            OnStart();
+        }
+
+        public void OnStart()
+        {
+            _isStopped = false;
+            for (int i = 0; i < _components.Length; ++i)
+            {
+                _components[i].OnPlay();
+            }
+
+            GameManager.Instance.StartGame();
         }
 
         public void OnDead()

@@ -6,6 +6,10 @@ namespace TMS.Event
     {
     }
 
+    public class PlayStartEvent
+    {
+    }
+
     public class GameClearEvent
     {
     }

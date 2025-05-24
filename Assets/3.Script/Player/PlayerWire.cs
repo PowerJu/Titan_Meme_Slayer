@@ -6,6 +6,7 @@ namespace TMS.Player
     public class PlayerWire : EntityComponent
     {
         [SerializeField] private Transform _wireObject;
+        [SerializeField] private Transform _handTransform;
         [SerializeField] private Vector3 _wireOffset = new Vector3(0, 0.5f, 0);
         private readonly string JumpString = "Jump";
         private Vector3 _wirePosition;
@@ -15,7 +16,7 @@ namespace TMS.Player
         {
             if (_isWiring)
             {
-                Vector3 currentPosition = transform.position + _wireOffset;
+                Vector3 currentPosition = _handTransform.position + _wireOffset;
                 Vector3 targetPosition = _wirePosition;
                 var magnitude = (targetPosition - currentPosition).magnitude;
                 _wireObject.position = (_wirePosition + currentPosition) * 0.5f;

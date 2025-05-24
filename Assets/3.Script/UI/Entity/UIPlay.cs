@@ -5,12 +5,14 @@ using System.Threading;
 using TMPro;
 using DG.Tweening;
 using TMS.Event;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIPlay : UIBase
 {
     [SerializeField] private GameObject _playButton;
     [SerializeField] private TMP_Text _scoreText;
-    
+
     private CancellationTokenSource _cancelToken;
 
     private void Awake()
@@ -21,7 +23,7 @@ public class UIPlay : UIBase
         EventBus.Subscribe<GameClearEvent>(ClearGame);
         EventBus.Subscribe<UpdateScoreEvent>(OnAcquireCoin);
 
-        _scoreText.text = $"Score: {0}";
+        BindEvent(_playButton, OnPlayButton);
     }
 
     private void StartGame(GameStartEvent gameStartEvent)
@@ -34,7 +36,13 @@ public class UIPlay : UIBase
 
     private void OnAcquireCoin(UpdateScoreEvent acquireCoinEvent)
     {
-        _scoreText.text = $"Score: {acquireCoinEvent.Score}";
-        _scoreText.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f).SetEase(Ease.OutBack);
+        // _scoreText.text = $"Score: {acquireCoinEvent.Score}";
+        // _scoreText.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f).SetEase(Ease.OutBack);
+    }
+    
+    private void OnPlayButton(PointerEventData _)
+    {
+        _playButton.SetActive(false);
+        EventBus.Publish(new PlayStartEvent());
     }
 }

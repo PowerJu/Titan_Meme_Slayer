@@ -1,7 +1,6 @@
-using DG.Tweening;
 using TMS.Core;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace TMS.Player
 {
@@ -10,6 +9,7 @@ namespace TMS.Player
         private readonly string HorizontalString = "Horizontal";
         private readonly string JumpString = "Jump";
 
+        [SerializeField] private PlayerInput _playerInput;
         [SerializeField] private Transform _modelTransform;
         [SerializeField] private float _forwardSpeed = 5f;
         [SerializeField] private float _horizontalSpeed = 5f;
@@ -30,6 +30,7 @@ namespace TMS.Player
         private Vector3 _endPosition;
         private Vector3 _wirePosition;
         private bool _isWiring;
+        private bool _isPlaying;
 
         public bool IsWiring => _isWiring;
         public Vector3 Velocity { get; private set; }
@@ -42,15 +43,24 @@ namespace TMS.Player
             }
 
             _playerWire ??= GetComponent<PlayerWire>();
+
+            _playerInput.actions["Attack"].performed += context => StartWireAction();
+            _playerInput.actions["Attack"].canceled += context => StopWireAction();
         }
 
         public override void ManualUpdate()
         {
+            if( !_isPlaying)
+                return;
+
             Jump();
         }
 
         public override void ManualFixedUpdate()
         {
+            if (!_isPlaying)
+                return;
+
             Move();
             if (_isWiring)
             {
@@ -65,8 +75,15 @@ namespace TMS.Player
             }
         }
 
+        public override void OnPlay()
+        {
+            base.OnPlay();
+            _isPlaying = true;
+        }
+
         public override void OnDead()
         {
+            _isPlaying = false;
             base.OnDead();
             _rigidbody.linearVelocity = Vector3.zero;
             _rigidbody.angularVelocity = Vector3.zero;
@@ -75,23 +92,15 @@ namespace TMS.Player
 
         private void Move()
         {
-            float moveInput = Input.GetAxis(HorizontalString);
-            Velocity = new Vector3(moveInput * _horizontalSpeed, 0, _forwardSpeed);
+            // float moveInput = Input.GetAxis(HorizontalString);
+            var moveInput = _playerInput.actions["Move"].ReadValue<Vector2>();
+            Debug.Log($"MoveInput: {moveInput}");
+            Velocity = new Vector3(moveInput.x * _horizontalSpeed, 0, _forwardSpeed);
             transform.position += Velocity * Time.fixedDeltaTime;
         }
 
         private void Jump()
         {
-            if (Input.GetButtonDown(JumpString) && transform.position.y < _maxWireHeight)
-            {
-                StartWireAction();
-            }
-
-            if (Input.GetButtonUp(JumpString))
-            {
-                StopWireAction();
-            }
-
             if (_isWiring)
             {
                 _modelTransform.up = Vector3.Lerp(_modelTransform.up, _wirePosition - transform.position, Time.fixedDeltaTime);
@@ -104,14 +113,17 @@ namespace TMS.Player
 
         private void StartWireAction()
         {
+            if (transform.position.y > _maxWireHeight || PlayerEntity.Me.IsPlaying == false)
+            {
+                return;
+            }
+
             _isWiring = true;
             var wireDistZ = Random.Range(_minWireDistance, _maxWireDistance);
 
             _startPosition = transform.position;
             _endPosition = _startPosition + Vector3.forward * wireDistZ;
             _wirePosition = (_startPosition + _endPosition) * 0.5f + new Vector3(0, _maxWireHeightOffset, 0);
-
-            Debug.Log($"Wire Position: {_wirePosition} Start: {_startPosition} End: {_endPosition}");
 
             _joint = gameObject.AddComponent<SpringJoint>();
             _joint.autoConfigureConnectedAnchor = false;

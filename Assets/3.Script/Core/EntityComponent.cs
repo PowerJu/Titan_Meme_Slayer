@@ -15,6 +15,10 @@ namespace TMS.Core
         public virtual void ManualUpdate() { }
         public virtual void ManualFixedUpdate() { }
 
+        public virtual void OnPlay()
+        {
+        }
+
         public virtual void OnDead()
         {
         }
