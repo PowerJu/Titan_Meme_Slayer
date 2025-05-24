@@ -11,7 +11,7 @@ namespace TMS.Player
         [SerializeField] private EntityComponent[] _components;
 
         private bool _isStopped = true;
-        
+
         private AcquireGameScoreEvent _acquireGameScoreEvent = new AcquireGameScoreEvent(1);
 
         public static PlayerEntity Me { get; private set; }
@@ -57,7 +57,13 @@ namespace TMS.Player
             {
                 _components[i].ManualUpdate();
             }
-            
+
+            if (transform.position.y < 0.0f)
+            {
+                OnDead();
+                return;
+            }
+
             // 게임 스코어 습득 이벤트 발행
             EventBus.Publish(_acquireGameScoreEvent);
         }
@@ -92,7 +98,6 @@ namespace TMS.Player
             _isStopped = true;
             transform.position = MapManager.Instance.SpawnPoint;
             MapManager.Instance.ResetMap();
-            // UIManager.Instance.OpenUI<UIDead>();
             UIManager.Instance.OpenUI<UIPlay>();
 
             for (int i = 0; i < _components.Length; ++i)
@@ -103,13 +108,13 @@ namespace TMS.Player
             //GameManager.Instance.RestartGame();
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Ground"))
-            {
-                OnDead();
-            }
-        }
+        // private void OnTriggerEnter(Collider other)
+        // {
+        //     if (other.CompareTag("Ground"))
+        //     {
+        //         OnDead();
+        //     }
+        // }
 
 #if UNITY_EDITOR
 

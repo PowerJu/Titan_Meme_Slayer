@@ -35,6 +35,12 @@ public class UIPlay : UIBase
         EventBus.Unsubscribe<UpdateScoreEvent>(OnAcquireCoin);
     }
 
+    public override void Open()
+    {
+        base.Open();
+        _playButton.SetActive(true);
+    }
+
     private void StartGame(GameStartEvent gameStartEvent)
     {
         _playButton.SetActive(true);

@@ -23,6 +23,11 @@ public class UIStageClear : UIBase
 
     private void OnNextStageButtonClicked(PointerEventData _)
     {
+        if(SceneManager.GetActiveScene().name == "Stage5")
+        {
+            return;
+        }
+        
         GameManager.Instance.RestartGame();
     }
     

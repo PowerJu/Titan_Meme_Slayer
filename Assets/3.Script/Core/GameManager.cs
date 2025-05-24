@@ -1,5 +1,6 @@
 using TMP.UI;
 using TMS.Event;
+using TMS.Map;
 using UnityEngine.SceneManagement;
 using UserInterface;
 
@@ -19,6 +20,8 @@ namespace TMS.Core
 
         public void StartGame()
         {
+            MapManager.Instance.OnGameStart();
+
             _coinScore = 0;
             _gameScore = 0;
 
@@ -45,7 +48,7 @@ namespace TMS.Core
             UIManager.Instance.CloseUI<UIStageClear>();
 
             var currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.buildIndex);
+            SceneManager.LoadScene(currentScene.buildIndex + 1);
             UIManager.Instance.OpenUI<UILobby>();
         }
 
