@@ -47,10 +47,16 @@ namespace TMS.Player
             _playerInput.actions["Attack"].performed += context => StartWireAction();
             _playerInput.actions["Attack"].canceled += context => StopWireAction();
         }
+        
+        public override void Dispose()
+        {
+            _playerInput.actions["Attack"].performed -= context => StartWireAction();
+            _playerInput.actions["Attack"].canceled -= context => StopWireAction();
+        }
 
         public override void ManualUpdate()
         {
-            if( !_isPlaying)
+            if (!_isPlaying)
                 return;
 
             Jump();

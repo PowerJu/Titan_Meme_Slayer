@@ -1,3 +1,4 @@
+using TMS.Core;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UserInterface;
@@ -17,8 +18,7 @@ namespace TMP.UI
 
         private void StartGame(PointerEventData _)
         {
-            UIManager.Instance.CloseUI<UILobby>();
-            UIManager.Instance.OpenUI<UIPlay>();
+            GameManager.Instance.StartGame();
         }
 
         private void ExitGame(PointerEventData _)

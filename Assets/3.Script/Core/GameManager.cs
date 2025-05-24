@@ -1,7 +1,6 @@
-using System;
 using TMP.UI;
 using TMS.Event;
-using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UserInterface;
 
 namespace TMS.Core
@@ -10,7 +9,7 @@ namespace TMS.Core
     {
         private int _coinScore = 0;
         private int _gameScore = 0;
-        
+
         private void Start()
         {
             UIManager.Instance.OpenUI<UILobby>();
@@ -22,9 +21,11 @@ namespace TMS.Core
         {
             _coinScore = 0;
             _gameScore = 0;
-            
+
             EventBus.Publish(new GameStartEvent());
-            
+
+            UIManager.Instance.CloseUI<UILobby>();
+            UIManager.Instance.OpenUI<UIPlay>();
             UIManager.Instance.OpenUI<UICoinOverlay>();
         }
 
@@ -33,8 +34,19 @@ namespace TMS.Core
             UIManager.Instance.CloseUI<UIPlay>();
             UIManager.Instance.CloseUI<UICoinOverlay>();
             UIManager.Instance.OpenUI<UIStageClear>();
-            
+
             EventBus.Publish(new GameClearEvent());
+        }
+
+        public void RestartGame()
+        {
+            UIManager.Instance.CloseUI<UIPlay>();
+            UIManager.Instance.CloseUI<UICoinOverlay>();
+            UIManager.Instance.CloseUI<UIStageClear>();
+
+            var currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.buildIndex);
+            UIManager.Instance.OpenUI<UILobby>();
         }
 
         private void OnAcquireCoin(AcquireCoinEvent acquireCoinEvent)

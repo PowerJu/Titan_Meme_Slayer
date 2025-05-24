@@ -26,7 +26,7 @@ namespace UserInterface
             var uiName = typeof(T).Name;
 
             T uiRes = Resources.Load<T>("UI/" + uiName);
-            var uiObj = Object.Instantiate(uiRes);
+            var uiObj = Object.Instantiate(uiRes, transform);
 
             if (IsExist<T>())
                 uiDic[uiName] = uiObj;
