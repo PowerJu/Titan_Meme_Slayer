@@ -2,6 +2,7 @@ using TMS.Core;
 using TMS.Event;
 using TMS.Map;
 using UnityEngine;
+using UserInterface;
 
 namespace TMS.Player
 {
@@ -43,6 +44,8 @@ namespace TMS.Player
             {
                 _components[i].Dispose();
             }
+
+            EventBus.Unsubscribe<PlayStartEvent>(Play);
         }
 
         private void Update()
@@ -82,8 +85,6 @@ namespace TMS.Player
             {
                 _components[i].OnPlay();
             }
-
-            GameManager.Instance.StartGame();
         }
 
         public void OnDead()
@@ -91,11 +92,15 @@ namespace TMS.Player
             _isStopped = true;
             transform.position = MapManager.Instance.SpawnPoint;
             MapManager.Instance.ResetMap();
+            // UIManager.Instance.OpenUI<UIDead>();
+            UIManager.Instance.OpenUI<UIPlay>();
 
             for (int i = 0; i < _components.Length; ++i)
             {
                 _components[i].OnDead();
             }
+
+            GameManager.Instance.RestartGame();
         }
 
         private void OnTriggerEnter(Collider other)

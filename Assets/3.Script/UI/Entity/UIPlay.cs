@@ -26,8 +26,18 @@ public class UIPlay : UIBase
         BindEvent(_playButton, OnPlayButton);
     }
 
+    private void OnDestroy()
+    {
+        _cancelToken?.Cancel();
+        _cancelToken?.Dispose();
+        EventBus.Unsubscribe<GameStartEvent>(StartGame);
+        EventBus.Unsubscribe<GameClearEvent>(ClearGame);
+        EventBus.Unsubscribe<UpdateScoreEvent>(OnAcquireCoin);
+    }
+
     private void StartGame(GameStartEvent gameStartEvent)
     {
+        _playButton.SetActive(true);
     }
 
     private void ClearGame(GameClearEvent gameStartEvent)
