@@ -100,7 +100,7 @@ namespace TMS.Player
                 _components[i].OnDead();
             }
 
-            GameManager.Instance.RestartGame();
+            //GameManager.Instance.RestartGame();
         }
 
         private void OnTriggerEnter(Collider other)
